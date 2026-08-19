@@ -353,6 +353,26 @@ definitely true is that the uncorrected p=0.022 was never a real p-value, and
 any document quoting it without the grid attached would be making a claim it
 could not support.
 
+**To be precise about what fails, since "retracted" invites the wrong reading.**
+The arithmetic is fine. +5.95pp is a correctly computed mean alpha for a named
+slice — the top 3 names by score v2, over 14 scans — and that slice really did
+return it. What fails is the inference drawn from it. Two things go wrong at
+once, and only one of them is the p-value:
+
+- **The p-value is not 0.022.** Corrected for the search that produced it, it is
+  0.070. That is marginal rather than dead, and it is not significance.
+- **The point estimate is itself inflated.** Take twenty noisy cells where the
+  true effect is zero, report the largest, and you get a positive number every
+  time. So +5.95pp is an *upper bound* on the top-3 slice's edge, not an
+  unbiased estimate of it. The winner's curse attaches to the number, not only
+  to its p-value — which is why "the estimate is still valid, only the p-value
+  moved" is a tempting reading and a wrong one.
+
+The system-level figure, which was not searched for, is the +2.26pp in the
+results table above, at p=0.36. That is the number that describes the screener.
++5.95pp describes the best slice of a grid, and the two should never be quoted
+as though they carry the same weight.
+
 **The contrast worth noticing.** The scoring model's promotion rests on criteria
 fixed in writing *before* the data existed. Those survive untouched, because
 pre-registration is not subject to this correction. The searched number does not
